@@ -1,6 +1,8 @@
 package org.tech.interview.task.example;
 
 import org.tech.interview.task.example.countDuplicates.CountDuplicates;
+import org.tech.interview.task.example.groupby.GroupBooksByTitleAndDate;
+import org.tech.interview.task.example.linkedlist.FindMiddleOfLinkedList;
 import org.tech.interview.task.example.lrucache.LruCache;
 import org.tech.interview.task.example.searchDuplicates.CountLongestUniqueString;
 import org.tech.interview.task.example.searchDuplicates.MaxLengthBetweenDuplicates;
@@ -15,5 +17,9 @@ public class Main {
         LruCache.showResult(LruCache.TEST1);
         MaxLengthBetweenDuplicates.showResult(MaxLengthBetweenDuplicates.TEST1);
         CountDuplicates.showResult(CountDuplicates.TEST);
+
+        GroupBooksByTitleAndDate.showResult();
+
+        FindMiddleOfLinkedList.showResult();
     }
 }

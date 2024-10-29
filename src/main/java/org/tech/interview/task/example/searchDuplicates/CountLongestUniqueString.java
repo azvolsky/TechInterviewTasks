@@ -36,4 +36,25 @@ public class CountLongestUniqueString {
         }
         return answer;
     }
+
+    public static int countLongestUniqueString1(String str, Set<Character> set, int left, int right, int answer) {
+        if (right > str.length()) {
+            return answer;
+        }
+
+        Character character = str.charAt(right);
+        if (set.contains(character)) {
+            while(set.contains(character)) {
+                set.remove(str.charAt(left));
+                left++;
+            }
+            return countLongestUniqueString1(str, set, left, right, answer);
+        } else {
+            set.add(character);
+            return countLongestUniqueString1(str, set, left, ++right, Math.max(answer, right - left + 1));
+        }
+
+
+    }
+
 }
